@@ -23,6 +23,7 @@ import {
   FormControl,
   FormMessage,
 } from "@/components/ui/form";
+import Image from "next/image";
 
 const formSchema = z.object({
   email: z.string().email(),
@@ -68,6 +69,15 @@ export default function SignupPage() {
     <div className="flex h-screen w-full items-center justify-center">
       <Card className="w-[380px]">
         <CardHeader>
+          <div className="flex justify-center">
+            <Image
+              src="/opp-logo.svg"
+              alt="On Pitch Performance"
+              width={100}
+              height={90}
+              priority
+            />
+          </div>
           <CardTitle>Create an account</CardTitle>
           <CardDescription>Join OPP and access your dashboard</CardDescription>
         </CardHeader>
